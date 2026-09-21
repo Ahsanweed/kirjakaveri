@@ -1,0 +1,6 @@
+{
+  "name": "Kirjakaveri",
+  "description": "Finnish library discovery, book search across Finland's library network, and personal reading lists manager.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

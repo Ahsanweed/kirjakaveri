@@ -1,0 +1,12 @@
+{
+  "projectId": "kirjakaveri-fi",
+  "appId": "1:149169098742:web:73d3ba2d1258dbe053c1d7",
+  "apiKey": "AIzaSyAkr10k6haSojbA9dyKH99va6w189VVJYo",
+  "authDomain": "kirjakaveri-fi.firebaseapp.com",
+  "firestoreDatabaseId": "ai-studio-kirjakaveri-c831db85-b474-436c-aa93-efaa22132a28",
+  "storageBucket": "kirjakaveri-fi.firebasestorage.app",
+  "messagingSenderId": "149169098742",
+  "measurementId": "",
+  "oAuthClientId": "149169098742-49naajh9663egv3gucjqrcesad4b02mh.apps.googleusercontent.com",
+  "recaptchaSiteKey": ""
+}

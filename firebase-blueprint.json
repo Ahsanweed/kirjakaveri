@@ -1,0 +1,112 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information and application preferences",
+      "type": "object",
+      "properties": {
+        "displayName": {
+          "type": "string",
+          "description": "User display name"
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "gender": {
+          "type": "string",
+          "description": "User gender preference",
+          "enum": ["Male", "Female", "Non-binary", "Prefer not to say"]
+        },
+        "language": {
+          "type": "string",
+          "description": "UI language code",
+          "enum": ["en", "fi", "sv"]
+        },
+        "darkMode": {
+          "type": "boolean",
+          "description": "Whether dark mode is enabled"
+        },
+        "notifications": {
+          "type": "boolean",
+          "description": "Whether daily notifications are enabled"
+        },
+        "homeLibrary": {
+          "type": "string",
+          "description": "Name or ID of home library"
+        },
+        "created_at": {
+          "type": "string",
+          "description": "Creation timestamp"
+        },
+        "updated_at": {
+          "type": "string",
+          "description": "Last update timestamp"
+        }
+      }
+    },
+    "UserBook": {
+      "title": "UserBook",
+      "description": "A book saved to the user's reading shelf (Done or Pending)",
+      "type": "object",
+      "properties": {
+        "bookId": {
+          "type": "string",
+          "description": "Finna or OpenLibrary record ID"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the book",
+          "maxLength": 300
+        },
+        "author": {
+          "type": "string",
+          "description": "Author name",
+          "maxLength": 200
+        },
+        "coverImage": {
+          "type": "string",
+          "description": "URL to book cover"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["completed", "want_to_read", "reading", "loaned"],
+          "description": "Reading status"
+        },
+        "rating": {
+          "type": "number",
+          "description": "User rating 1-5"
+        },
+        "quotes": {
+          "type": "string",
+          "description": "User favorite quotes",
+          "maxLength": 5000
+        },
+        "thoughts": {
+          "type": "string",
+          "description": "User personal thoughts or review",
+          "maxLength": 5000
+        },
+        "addedAt": {
+          "type": "string",
+          "description": "Date added"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Date updated"
+        }
+      },
+      "required": ["bookId", "title", "author", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User account and profile preferences document"
+    },
+    "/users/{userId}/books/{bookId}": {
+      "schema": "UserBook",
+      "description": "User reading list items (Done and Pending books)"
+    }
+  }
+}
