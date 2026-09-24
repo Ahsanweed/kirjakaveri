@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "kirjakaveri",
     "public": "dist",
     "ignore": [
       "firebase.json",
@@ -23,7 +22,7 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "!/.well-known/**",
         "destination": "/index.html"
       }
     ]
