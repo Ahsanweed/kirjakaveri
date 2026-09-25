@@ -87,6 +87,22 @@
           "description": "User personal thoughts or review",
           "maxLength": 5000
         },
+        "loanDueDate": {
+          "type": "string",
+          "description": "Return due date ISO string"
+        },
+        "loanLibrary": {
+          "type": "string",
+          "description": "Name of borrowing library branch"
+        },
+        "reminder1DayBefore": {
+          "type": "boolean",
+          "description": "Whether push reminder 1 day before return date is enabled"
+        },
+        "itemType": {
+          "type": "string",
+          "description": "Media type (book, game, movie, boardgame)"
+        },
         "addedAt": {
           "type": "string",
           "description": "Date added"
